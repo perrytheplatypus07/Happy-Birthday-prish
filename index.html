@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            background-color: #0b1522;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            flex-direction: column;
+        }
+        .heart {
+            position: relative;
+            height: 160px;
+            width: 100px;
+            background: #f3028b;
+            border-radius: 200px 200px 0 0;
+            transform: rotate(45deg);
+            animation: beat 1s infinite;
+        }
+        .heart::before {
+            content: "";
+            position: absolute;
+            background: #f3028b;
+            height: 160px;
+            width: 100px;
+            transform: rotate(-90deg);
+            border-radius: 200px 200px 0 0;
+            left: -30px;
+            top: 30px;
+        }
+        @keyframes beat {
+            0%, 100% {
+                transform: scale(1) rotate(45deg);
+            }
+            50% {
+                transform: scale(1.1) rotate(45deg);
+            }
+        }
+        .click-me {
+            color: #ffffff;
+            font-size: 48px;
+            margin-top: 30px;
+            margin-right: 40px;
+        }
+    </style>
+</head>
+<body>
+    <a href="wish.html" target="_blank">
+        <div class="heart"></div>
+    </a>
+    <div class="click-me">Click me!</div>
+</body>
+</html>
